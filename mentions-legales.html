@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — Le Loup, le Renard &amp; la Galette, Nantes</title>
+  <meta name="description" content="Mentions légales du site de la crêperie Le Loup, le Renard et la Galette, 19 rue de la Juiverie, 44000 Nantes.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Mise en page locale des mentions légales */
+    .legal {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: clamp(7.5rem, 16vw, 10rem) var(--marge) clamp(4rem, 8vw, 6rem);
+    }
+    .legal h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 0.4rem; }
+    .legal-sous {
+      font-family: var(--script);
+      font-size: 1.45rem;
+      color: var(--renard);
+      margin-bottom: 2.5rem;
+    }
+    .legal h2 {
+      font-size: 1.3rem;
+      margin: 2.4rem 0 0.7rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1.5px solid var(--renard);
+      display: table; /* rétrécit au texte, filet renard sous le titre seul */
+    }
+    .legal p { margin-bottom: 0.8rem; color: var(--encre-douce); }
+    .legal a {
+      color: var(--encre);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--renard);
+      padding-bottom: 1px;
+      transition: color 0.3s ease;
+    }
+    .legal a:hover, .legal a:focus-visible { color: var(--renard); }
+    .att { font-family: var(--script); font-size: 1.1em; color: var(--renard); }
+    .legal-retour {
+      display: inline-block;
+      margin-bottom: 2.5rem;
+    }
+    /* Nav simplifiée : pas de burger ici, le téléphone reste visible */
+    @media (max-width: 900px) {
+      .nav__tel { display: inline-block; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav est-solide">
+    <a class="nav__brand" href="index.html" aria-label="Le Loup, le Renard et la Galette — retour à l'accueil">
+      <span class="nav__brand-line">Le Loup, le Renard</span>
+      <span class="nav__brand-amp">&amp; la Galette</span>
+    </a>
+    <a class="nav__tel" href="tel:+33240471271">02 40 47 12 71</a>
+  </header>
+
+  <main class="legal">
+    <a class="legal-retour" href="index.html">← Retour au site</a>
+    <h1>Mentions légales</h1>
+    <p class="legal-sous">les petites lignes de la fable — promis, aucun piège de renard</p>
+
+    <h2>Éditeur du site</h2>
+    <p>Le Loup, le Renard et la Galette<br>
+    19 rue de la Juiverie, 44000 Nantes<br>
+    Téléphone : <a href="tel:+33240471271">02 40 47 12 71</a><br>
+    E-mail : <a href="mailto:heckophelie@gmail.com">heckophelie@gmail.com</a></p>
+    <p>Forme juridique, capital social, SIRET, TVA intracommunautaire et directeur
+    de la publication : <span class="att">[À CONFIRMER]</span></p>
+
+    <h2>Hébergement</h2>
+    <p><span class="att">[À CONFIRMER]</span> — nom, raison sociale et coordonnées
+    de l'hébergeur du site.</p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble des contenus de ce site — textes, photographies, illustrations
+    et éléments graphiques — appartient au Loup, au Renard et à la Galette,
+    ou à leurs auteurs. Toute reproduction sans autorisation préalable est interdite.</p>
+    <p>Les photographies présentées sont des photographies réelles de l'établissement,
+    de sa salle, de sa terrasse et de ses galettes.</p>
+
+    <h2>Données personnelles</h2>
+    <p>Ce site ne collecte aucune donnée personnelle et n'utilise aucun cookie
+    de suivi. Les coordonnées transmises par téléphone ou par e-mail servent
+    uniquement au traitement des demandes et réservations, conformément au RGPD.
+    Pour toute question : <a href="mailto:heckophelie@gmail.com">heckophelie@gmail.com</a>.</p>
+
+    <h2>Conception et réalisation</h2>
+    <p>Site conçu et réalisé par <a href="https://vokumagency.com" target="_blank" rel="noopener">Vokum</a>.</p>
+  </main>
+
+</body>
+</html>

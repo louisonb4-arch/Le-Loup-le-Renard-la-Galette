@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Loup, le Renard &amp; la Galette — Crêperie créative au Bouffay, Nantes</title>
+  <meta name="description" content="Crêperie créative au cœur du Bouffay. Galettes de sarrasin signatures — La Loup, La Renard, La Moby Dick — médaille d'argent 2020 du meilleur crêpier de France. 19 rue de la Juiverie, Nantes.">
+  <meta property="og:title" content="Le Loup, le Renard &amp; la Galette — Crêperie au Bouffay, Nantes">
+  <meta property="og:description" content="Galettes de sarrasin créatives servies comme des personnages de fable, au 19 rue de la Juiverie, Nantes.">
+  <meta property="og:image" content="photos/01.webp">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Intro jouée une fois par session
+    try {
+      if (!sessionStorage.getItem('llrg-intro-vue')) {
+        document.documentElement.classList.add('avec-intro');
+        sessionStorage.setItem('llrg-intro-vue', '1');
+      }
+    } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Loup, le Renard et la Galette",
+    "servesCuisine": "Crêperie",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "19 rue de la Juiverie",
+      "addressLocality": "Nantes",
+      "postalCode": "44000",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33240471271",
+    "email": "heckophelie@gmail.com"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== OUVERTURE (une fois par session) ===== -->
+  <div class="ouverture" id="ouverture" aria-hidden="true">
+    <p class="ouverture__script">Il était une fois, rue de la Juiverie…</p>
+    <p class="ouverture__nom">Le Loup, le Renard<br><em class="amp">&amp;</em> la Galette</p>
+    <div class="ouverture__motif" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#haut" aria-label="Le Loup, le Renard et la Galette — retour en haut">
+      <span class="nav__brand-line">Le Loup, le Renard</span>
+      <span class="nav__brand-amp">&amp; la Galette</span>
+    </a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#histoire">L'histoire</a>
+      <a href="#galettes">Les galettes</a>
+      <a href="#bestiaire">Le bestiaire</a>
+      <a href="#lieu">Le lieu</a>
+      <a href="#carte">La carte</a>
+      <a href="#infos">Venir</a>
+    </nav>
+    <a class="nav__tel" href="tel:+33240471271">02 40 47 12 71</a>
+    <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu : hors du header pour éviter tout containing block (backdrop-filter/transform) -->
+  <div class="mmenu" id="mobileMenu" aria-hidden="true">
+    <nav class="mmenu__links" aria-label="Navigation mobile">
+      <a href="#histoire"><em>I</em> L'histoire</a>
+      <a href="#galettes"><em>II</em> Les galettes</a>
+      <a href="#bestiaire"><em>III</em> Le bestiaire</a>
+      <a href="#lieu"><em>IV</em> Le lieu</a>
+      <a href="#carte"><em>V</em> La carte</a>
+      <a href="#infos"><em>VI</em> Venir</a>
+    </nav>
+    <div class="mmenu__foot">
+      <a href="tel:+33240471271">02 40 47 12 71</a>
+      <p>19 rue de la Juiverie, Nantes</p>
+    </div>
+  </div>
+
+  <main id="haut">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <figure class="hero__media">
+        <img src="photos/01.webp" alt="La terrasse de la crêperie au Bouffay : peaux de mouton sur les chaises, guirlandes lumineuses et vitrine peinte à la main" width="1100" height="1100" fetchpriority="high">
+      </figure>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Crêperie · Bouffay · Nantes</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line">Le Loup,</span>
+          <span class="hero__title-line">le Renard</span>
+          <span class="hero__title-line"><em class="amp">&amp;</em> la Galette</span>
+        </h1>
+        <p class="hero__promise">Des galettes de sarrasin créatives, nommées comme des personnages de fable, servies sous les guirlandes de la rue de la Juiverie.</p>
+        <div class="hero__actions">
+          <a class="btn btn--plein" href="#bestiaire">Rencontrer le bestiaire</a>
+          <a class="btn btn--ligne" href="tel:+33240471271">02 40 47 12 71</a>
+        </div>
+      </div>
+      <p class="hero__medal"><span>Médaille d'argent 2020</span> du meilleur crêpier de France</p>
+    </section>
+
+    <!-- ===== CHAPITRE I — HISTOIRE ===== -->
+    <section class="chapitre" id="histoire">
+      <div class="chapitre__marque reveal">
+        <span class="chapitre__num">Chapitre I</span>
+        <span class="chapitre__filet" aria-hidden="true"></span>
+        <span class="chapitre__nom">Il était une fois, rue de la Juiverie</span>
+      </div>
+      <div class="histoire">
+        <div class="histoire__texte reveal">
+          <p class="histoire__lead"><span class="lettrine">A</span>u cœur du Bouffay, entre les façades de pierre et les pavés, une vitrine peinte à la main annonce la couleur : ici, le loup et le renard se sont mis d'accord autour d'une galette.</p>
+          <p>Le sarrasin est bien cuit, dentelle croustillante sur les bords. Les recettes portent des noms d'animaux et de personnages — et chacune raconte quelque chose. En 2020, la maison a reçu la <strong>médaille d'argent du meilleur crêpier de France</strong>.</p>
+          <p>En bas, le comptoir, les casiers de bois et les théières dépareillées. En haut, la <strong>salle à l'étage</strong>, comme l'annonce la vitrine. Dehors, la terrasse aux peaux de mouton, sous les guirlandes.</p>
+          <p class="histoire__script" aria-hidden="true">… et la galette les réconcilia tous.</p>
+        </div>
+        <figure class="histoire__img reveal">
+          <img src="photos/08.webp" alt="Théières en céramique dépareillées et mug orné de renards, sur les tables en bois de la crêperie" width="1200" height="1200" loading="lazy">
+          <figcaption>Les théières dépareillées de la maison — et le renard, jamais bien loin.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== CHAPITRE II — GALETTES ===== -->
+    <section class="chapitre chapitre--encre" id="galettes">
+      <div class="chapitre__marque chapitre__marque--claire reveal">
+        <span class="chapitre__num">Chapitre II</span>
+        <span class="chapitre__filet" aria-hidden="true"></span>
+        <span class="chapitre__nom">Le sarrasin, bien cuit</span>
+      </div>
+
+      <div class="galettes__intro reveal">
+        <h2>Des galettes qui n'ont pas peur du feu.</h2>
+        <p>Sarrasin sombre, bords en dentelle, dressages francs : œuf bio, fromages affinés, légumes croquants, sauces maison. Rien de timide.</p>
+      </div>
+
+      <div class="galettes__flux">
+        <figure class="galettes__item galettes__item--g reveal">
+          <img src="photos/04.webp" alt="Galette de sarrasin au saumon fumé et œuf bio, crème et ciboulette, servie sur assiette noire" width="1100" height="1100" loading="lazy">
+          <figcaption><span>01</span> Saumon fumé, œuf bio, crème &amp; ciboulette</figcaption>
+        </figure>
+        <figure class="galettes__item galettes__item--d reveal">
+          <img src="photos/02.webp" alt="Galette créative dressée avec crème, jeunes pousses et pickles, servie face à la cour intérieure" width="1100" height="1100" loading="lazy">
+          <figcaption><span>02</span> Dressée face à la cour, jeunes pousses &amp; pickles</figcaption>
+        </figure>
+        <figure class="galettes__item galettes__item--g reveal">
+          <img src="photos/07.webp" alt="Galette complète avec jambon cru, copeaux de parmesan, tomates confites, mâche et sauce verte sur assiette jaune" width="1100" height="1100" loading="lazy">
+          <figcaption><span>03</span> Jambon cru, parmesan, tomates confites</figcaption>
+        </figure>
+        <figure class="galettes__item galettes__item--d galettes__item--fin reveal">
+          <img src="photos/05.webp" alt="Galette végétarienne aux crémeux verts et roses, sorbet framboise, servie sur assiette framboise" width="1080" height="1080" loading="lazy">
+          <figcaption><span>04</span> Crémeux d'avocat, betterave &amp; sorbet — la couleur est dans l'assiette</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== CHAPITRE III — BESTIAIRE (signature) ===== -->
+    <section class="chapitre" id="bestiaire">
+      <div class="chapitre__marque reveal">
+        <span class="chapitre__num">Chapitre III</span>
+        <span class="chapitre__filet" aria-hidden="true"></span>
+        <span class="chapitre__nom">Le bestiaire du Bouffay</span>
+      </div>
+
+      <div class="bestiaire__intro reveal">
+        <h2>Ici, la galette est toujours au féminin.<br><em>Même quand elle s'appelle La&nbsp;Loup.</em></h2>
+        <p>Chaque galette signature est un personnage. On ne commande pas un plat — on convoque quelqu'un à sa table.</p>
+      </div>
+
+      <ol class="bestiaire__liste">
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Loup</span>
+            <span class="bete__trait">celle qui mord un peu</span>
+            <span class="bete__prix">13,90</span>
+          </button>
+          <div class="bete__corps"><p>Ossau-Iraty, spianata piccante, crème de poivrons, œuf bio, jeunes pousses, copeaux de parmesan, piment d'Espelette.</p></div>
+        </li>
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Renard</span>
+            <span class="bete__trait">fine et fumée</span>
+            <span class="bete__prix">13,50</span>
+          </button>
+          <div class="bete__corps"><p>Chèvre, saumon fumé, jeunes pousses, crème fraîche, ciboulette, citron frais.</p></div>
+        </li>
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Belette <em class="tag-vg">végé</em></span>
+            <span class="bete__trait">douce comme un automne</span>
+            <span class="bete__prix">13,90</span>
+          </button>
+          <div class="bete__corps"><p>Crémeux de butternut, œuf bio, sauce yaourt-tahini, feta, pousses d'épinards, amandes effilées, vinaigrette à l'orange.</p></div>
+        </li>
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Chevrotte</span>
+            <span class="bete__trait">sucrée-salée, tête dure</span>
+            <span class="bete__prix">13,90</span>
+          </button>
+          <div class="bete__corps"><p>Chèvre, pommes confites, chiffonnade de coppa, oignons confits, miel, oignons frits, crème fraîche, vinaigrette à l'orange.</p></div>
+        </li>
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Viking</span>
+            <span class="bete__trait">venue du nord, restée pour le camembert</span>
+            <span class="bete__prix">13,90</span>
+          </button>
+          <div class="bete__corps"><p>Bacon, camembert, pommes de terre, œuf bio, oignons confits, jeunes pousses, oignons frits.</p></div>
+        </li>
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Habibi</span>
+            <span class="bete__trait">épices marocaines, citron confit</span>
+            <span class="bete__prix">14,90</span>
+          </button>
+          <div class="bete__corps"><p>Émincés de poulet aux épices marocaines et citron confit, cheddar, pommes de terre, sauce yaourt-tahini, amandes effilées.</p></div>
+        </li>
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Brocéliande</span>
+            <span class="bete__trait">sortie de la forêt, andouille sous le bras</span>
+            <span class="bete__prix">13,90</span>
+          </button>
+          <div class="bete__corps"><p>Andouille de Guémené, camembert, pommes cuites, oignons confits, sauce moutarde à l'ancienne, oignons frits.</p></div>
+        </li>
+        <li class="bete reveal">
+          <button class="bete__tete" aria-expanded="false">
+            <span class="bete__nom">La Moby Dick</span>
+            <span class="bete__trait">le monstre marin de la carte</span>
+            <span class="bete__prix">14,90</span>
+          </button>
+          <div class="bete__corps"><p>Sardines bretonnes en rillettes maison — cream cheese, citron vert, échalotes, piment d'Espelette —, tapenade de tomates séchées, guacamole, huile d'olive et glace wasabi.</p></div>
+        </li>
+      </ol>
+      <p class="bestiaire__note reveal">Le bestiaire complet vit sur la carte, en salle — avec La Cueillette, La Crazy Avocado, L'Augustine, La Rosie et La Fat West. Prix relevés en vitrine, à confirmer en salle.</p>
+    </section>
+
+    <!-- ===== CHAPITRE IV — LE LIEU ===== -->
+    <section class="chapitre chapitre--noisette" id="lieu">
+      <div class="chapitre__marque reveal">
+        <span class="chapitre__num">Chapitre IV</span>
+        <span class="chapitre__filet" aria-hidden="true"></span>
+        <span class="chapitre__nom">La tanière</span>
+      </div>
+      <div class="lieu">
+        <figure class="lieu__grande reveal">
+          <img src="photos/10.webp" alt="La salle de la crêperie : comptoir en bois ancien, casiers remplis de livres et de vaisselle, renards en origami sur les étagères" width="1200" height="1200" loading="lazy">
+          <figcaption>Le comptoir, les casiers de bois — et deux renards en origami qui surveillent la salle.</figcaption>
+        </figure>
+        <div class="lieu__texte reveal">
+          <h2>Une salle en bas,<br>une salle à l'étage,<br>une terrasse sous les guirlandes.</h2>
+          <p>Bois blond, murs gris-bleu, bouteilles de sirop alignées comme des livres. L'hiver, la terrasse se couvre de peaux de mouton et de plaids moutarde ; l'été, elle regarde passer la rue de la Juiverie.</p>
+          <p class="lieu__script" aria-hidden="true">salle à l'étage, comme dit la vitrine</p>
+        </div>
+        <figure class="lieu__petite reveal">
+          <img src="photos/06.webp" alt="Galette de sarrasin en terrasse avec un verre de kir breton, chaises en cannage en arrière-plan" width="756" height="800" loading="lazy">
+          <figcaption>En terrasse, kir breton et sarrasin.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== CHAPITRE V — CARTE ===== -->
+    <section class="chapitre" id="carte">
+      <div class="chapitre__marque reveal">
+        <span class="chapitre__num">Chapitre V</span>
+        <span class="chapitre__filet" aria-hidden="true"></span>
+        <span class="chapitre__nom">La carte</span>
+      </div>
+
+      <div class="carte">
+        <div class="carte__col reveal">
+          <h3>Les complètes</h3>
+          <ul class="carte__liste">
+            <li><span>La Complète <small>œuf bio, emmental, jambon blanc supérieur</small></span><i></i><b>9,00</b></li>
+            <li><span>Complète oignons confits</span><i></i><b>9,50</b></li>
+            <li><span>Complète crème fraîche</span><i></i><b>9,50</b></li>
+            <li><span>Complète champignons frais</span><i></i><b>9,50</b></li>
+            <li><span>Complète camembert</span><i></i><b>10,00</b></li>
+            <li><span>Complète chèvre</span><i></i><b>10,00</b></li>
+            <li><span>Complète coppa</span><i></i><b>10,00</b></li>
+            <li><span>Complète andouille de Guémené</span><i></i><b>11,00</b></li>
+            <li><span>La Super Complète</span><i></i><b>13,00</b></li>
+            <li><span>Super Complète saumon fumé</span><i></i><b>13,50</b></li>
+            <li><span>Super Complète andouille</span><i></i><b>12,50</b></li>
+            <li class="carte__sous"><span>Galette beurre</span><i></i><b>3,50</b></li>
+            <li class="carte__sous"><span>Bol de salade</span><i></i><b>3,00</b></li>
+          </ul>
+        </div>
+
+        <div class="carte__col reveal">
+          <h3>Les crêpes signatures</h3>
+          <ul class="carte__liste">
+            <li><span>La Popeye <small>ganache chocolat, glace lait de coco, chocolat fondu, coco râpée, crème fouettée</small></span><i></i><b>9,00</b></li>
+            <li><span>La Prosper <small>fondant au chocolat, confiture d'orange, glace pain d'épices</small></span><i></i><b>9,00</b></li>
+            <li><span>La Cookies <small>banane, chocolat fondu, glace vanille-pécan-caramel, cookies de la « Feeling Good Bakery »</small></span><i></i><b>9,90</b></li>
+          </ul>
+          <h3>Les classiques</h3>
+          <ul class="carte__liste">
+            <li><span>Beurre sucre</span><i></i><b>3,50</b></li>
+            <li><span>Caramel beurre salé</span><i></i><b>5,00</b></li>
+            <li><span>Chocolat</span><i></i><b>5,00</b></li>
+            <li><span>Citron / sucre</span><i></i><b>5,00</b></li>
+            <li><span>Miel</span><i></i><b>4,50</b></li>
+            <li><span>Crème de marron</span><i></i><b>5,50</b></li>
+            <li><span>Pommes confites</span><i></i><b>5,50</b></li>
+            <li><span>Pommes / glace caramel</span><i></i><b>7,00</b></li>
+          </ul>
+        </div>
+
+        <div class="carte__col carte__col--formules reveal">
+          <div class="formule">
+            <h3>Formule du midi</h3>
+            <p class="formule__prix">14 €</p>
+            <p class="formule__detail">1 complète au choix + 1 crêpe (beurre sucre, caramel beurre salé, chocolat ou citron sucre) + 1 verre de cidre ou jus de pomme bio.</p>
+            <p class="formule__note">Hors week-end et jours fériés.</p>
+          </div>
+          <div class="formule formule--marmaille">
+            <h3>Formule marmaille</h3>
+            <p class="formule__prix">11 €</p>
+            <p class="formule__detail">Pour les moins de 12 ans : 1 galette jambon-fromage, jambon-œuf ou œuf-fromage + 1 sirop à l'eau + 1 crêpe beurre sucre ou 1 glace.</p>
+          </div>
+          <p class="carte__avertissement">Carte relevée sur le panneau en vitrine — prix indicatifs, susceptibles d'évoluer. Boissons, grandes salades et galettes du moment : [À CONFIRMER] en salle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAPITRE VI — INFOS ===== -->
+    <section class="chapitre chapitre--encre" id="infos">
+      <div class="chapitre__marque chapitre__marque--claire reveal">
+        <span class="chapitre__num">Chapitre VI</span>
+        <span class="chapitre__filet" aria-hidden="true"></span>
+        <span class="chapitre__nom">Venir à la tanière</span>
+      </div>
+      <div class="infos">
+        <div class="infos__bloc reveal">
+          <h3>Adresse</h3>
+          <p>19 rue de la Juiverie<br>44000 Nantes — quartier Bouffay</p>
+          <a class="lien-souligne" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Loup+le+Renard+et+la+Galette+19+rue+de+la+Juiverie+44000+Nantes" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+        <div class="infos__bloc reveal">
+          <h3>Horaires</h3>
+          <p>[À CONFIRMER]</p>
+          <p class="infos__mineur">Formule du midi servie hors week-end et jours fériés.</p>
+        </div>
+        <div class="infos__bloc reveal">
+          <h3>Réserver</h3>
+          <p><a class="infos__tel" href="tel:+33240471271">02 40 47 12 71</a></p>
+          <p><a class="lien-souligne" href="mailto:heckophelie@gmail.com">heckophelie@gmail.com</a></p>
+          <p class="infos__mineur">Réservation en ligne : [À CONFIRMER]</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="pied">
+    <p class="pied__morale reveal">Moralité&nbsp;: <em>qui passe rue de la Juiverie sans s'arrêter<br>n'a jamais goûté au sarrasin.</em></p>
+    <div class="pied__marque" aria-hidden="true">
+      <span>Le Loup,</span>
+      <span>le Renard</span>
+      <span><em>&amp;</em> la Galette</span>
+    </div>
+    <div class="pied__bas">
+      <p>19 rue de la Juiverie, 44000 Nantes</p>
+      <a href="tel:+33240471271">02 40 47 12 71</a>
+      <p>Crêperie — Bouffay</p>
+    </div>
+    <div class="pied__legal">
+      <p>Photos du restaurant. Horaires et prix&nbsp;: [à confirmer].</p>
+      <p><a href="mentions-legales.html">Mentions légales</a> · Création <a href="https://vokumagency.com" target="_blank" rel="noopener">Vokum</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
